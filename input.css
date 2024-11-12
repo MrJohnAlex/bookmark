@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@media screen(lg) {
+  .bg-hero {
+    width: 2000px;
+    height: 300px !important;
+    left: 30%;
+    @apply absolute rounded-l-full top-52 bg-softBlue;
+  }
+  .bg-tabs {
+    width: 2000px;
+    height: 300px !important;
+    right: 60%;
+    @apply absolute rounded-r-full top-60 bg-softBlue;
+  }
+}
+
+.ficon:hover {
+}
+
+/* mobile menu */
+.humburger {
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  transition: all 0.25s;
+  position: relative;
+}
+.humburger-top,
+.humburger-middle,
+.humburger-bottom {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 24px;
+  height: 3px;
+  background-color: #000;
+  transition: all 0.25s;
+}
+.humburger-middle {
+  transform: translateY(7px);
+}
+.humburger-bottom {
+  transform: translateY(14px);
+  background-color: #000;
+}
+
+.open {
+  transform: rotate(90deg);
+  transform: translateY(0deg);
+  position: fixed !important;
+  top: 20px;
+  right: 50px;
+}
+.open .humburger-middle {
+  display: none;
+}
+.open .humburger-top {
+  transform: translateX(6px) translateY(6px) rotate(45deg);
+  background-color: #fff;
+}
+
+.open .humburger-bottom {
+  transform: translateX(6px) translateY(6px) rotate(-45deg);
+  background-color: #fff;
+}
